@@ -122,6 +122,12 @@ function eventBind() {
             init_index1();
         }
     });
+
+    $(document).ready(function() {
+        $(window).on('load', function() {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+    });
 }
 
 function init_index1() {
