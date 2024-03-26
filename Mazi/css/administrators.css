@@ -1,0 +1,36 @@
+.display_none {
+    display: none;
+}
+
+body {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .warp {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.header {
+    display: flex;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.header>div {
+    padding: 3px;
+    margin: 3px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+}
+
+.container>table>tbody>tr:first-child {
+    width: 100px;
+}

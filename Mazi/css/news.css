@@ -1,0 +1,224 @@
+html,body{
+    margin: 0px;
+}
+
+#main_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.blank{
+    height: 150px;
+}
+/* 뉴스 해더 */
+#news_Header {
+    font-family: default_Bold;
+    font-size: 24px;
+    color: #0b1a2e;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Bar 줄 긋기 */
+#bar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 6px;
+    z-index: 2;
+}
+
+/* 집게 부분 이미지 */
+#tongs_Container {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+/* 이미지 전면 */
+#tongs_Front {
+    display: flex;
+    /* 확대 및 축소했을때 고정되게끔 하려고 absolute이용 */
+    position: absolute;
+    z-index: 3;
+    margin-top: -30px;
+    /* zindex로 인해 영역 겹침 해결 */
+    pointer-events: none;
+}
+
+#tongs_Front_Center {
+    /* 중앙 정렬 */
+    margin-left: 215px;
+    margin-right: 215px;
+}
+
+#tongs_Front>div>img {
+    width: 85px;
+}
+
+#tongs_Back {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    margin-top: -35px;
+    margin-left: 15px;
+    pointer-events: none;
+}
+
+#tongs_Back_Center {
+    /* 중앙 정렬 */
+    margin-left: 215px;
+    margin-right: 215px;
+}
+
+#tongs_Back>div>img {
+    width: 85px;
+}
+
+/* news mainbox */
+#news_Mainbox {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    background-color: white;
+}
+
+#news_Mainbox>div {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 280px;
+    box-shadow: 2px 3px 5px 0px;
+}
+/* Main 박스 사이 벌리기 */
+.mainbox_Con:nth-child(2) {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.news_ThirdMainBox{
+    cursor: pointer;
+}
+
+/* 데이터 없을때 커서 디폴트 */
+.nocursor{
+    cursor: default;
+}
+
+.imgBox_Click {
+    /* 이미지 호버시 기능 추가 및, 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 180px;
+    border: 1px solid black;
+    margin-top: 25px;
+    margin-bottom: 17px;
+    transition: 0.5s;
+}
+
+.NewsImg {
+    /* 이미지 변경 속도 */
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.Tooltip {
+    /* 중앙 자세히보기 글자 */
+    font-family: default_Medium;
+    font-size: 22px;
+    position: absolute;
+    text-align: center;
+    /* opacity 0을 줘서 글자를 처음엔 안 보이게끔 */
+    opacity: 0;
+    transition: 0.5s;
+    color: white;
+}
+
+.imgBox_Click:hover{
+    /* 이미지 뒤에 있는 배경 색 연하게 */
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.imgBox_Click:hover .NewsImg {
+    /* 투명도를 높여 뒤에 배경 색이 보이며 이미지 연하게 */
+    opacity: 0.3;
+}
+
+.imgBox_Click:hover .Tooltip {
+    /* 툴팁 나오게끔. */
+    opacity: 1;
+}
+
+.imgBox_Header{ 
+    /* weight로 늘림. */
+    font-family: NanumGothicBold;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+
+/* 뉴스 리스트 부분 */
+#news_Listbox{
+    display: flex;
+    margin-top: 40px;
+    width:900px;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+#title>span{
+    /* LIST 굵게 및 거리 조절 */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: default_Bold;
+    font-size: 24px;
+    color: #0b1a2e;
+}
+.news_List_Imgbox{
+    /* 이미지 호버시 기능 추가 및, 중앙 정렬 */
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    height: 250px;
+    margin-bottom: 30px;
+    margin-left: 2.5%;
+    transition: 0.5s;
+}
+.news_List_Imgbox_Click{
+    /* 이미지 칸 border 크기 조절 및 거리 조절 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    margin-top: 25px;
+    margin-bottom: 17px;
+    transition: 0.5s;
+}
+.news_List_Imgbox_Click:hover{
+    /* 이미지 뒤에 있는 배경 색 연하게 */
+    background-color: rgba(0, 0, 0, 0.70);
+    cursor: pointer;
+}
+.news_List_Imgbox_Click:hover .Tooltip{
+    /* 툴팁 나오게끔. */
+    opacity: 1;
+}
+.news_List_Imgbox_Click:hover .NewsImg{
+    opacity: 0.3;
+}
+.news_List_Header{
+    /* weight로 늘림. */
+    font-family: NanumGothicBold;
+    font-size: 20px;
+    font-weight: 550;
+}
+.news_List_Header:hover{
+    cursor: pointer;
+}

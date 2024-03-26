@@ -1,0 +1,279 @@
+.Font_Bold{
+    font-family: default_Bold;
+}
+.Font_Medium{
+    font-family: default_Medium;
+}
+/* 바디 및 html 사전 설정 */
+html{
+    overflow: hidden;
+}
+html, #body{
+    margin:0;
+    height:100%;
+}
+
+/* blank */
+.blank{
+    height: 150px;
+    background-color: #0b1a2e;
+    transition: 0.5s;
+}
+.blank_color{
+    height: 150px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+/* Js 클릭 이벤트 실행시 추가해주는 css */
+.Container{
+    display : none;
+    transition: opacity 0.5s, display 0.5s 0.5s;
+    opacity: 0;
+    z-index: 1;
+}
+.act{
+    opacity: 1;
+    display : flex;
+}
+/* 공용 bar */
+.bar{
+    margin-left: auto;
+    margin-right: auto;
+    width:40px;
+    height:4.5px;
+    background-color: #0b1a2e;
+    align-items: center;
+}
+.bar.secondbar{
+    background-color: white;
+}
+/* 사이드 선택 네비게이션 스타일 지정 */
+#Select_Bar{
+    z-index: 3;
+    font-family: NanumGothic;
+    position: absolute;
+    background-color: #0b1a2e;
+    height:100%;
+    transition: 0.5s;
+}
+#Select_Bar>div{
+    margin-left: 220px;
+    right:0;
+    transition: 0.5s;
+}
+
+/* 네비게이션 바 안에 선택 버튼 */
+.Select_Button{
+    background-color: #9A9A9A;
+    margin-top: 80px;
+    font-size: 30px;
+    color: #0b1a2e;
+    height: 66px;
+    width: 200px;
+    border-radius: 30px 0% 0% 30px;
+    transition: 0.2s;
+}
+.Select_Button:nth-child(n+2){
+    margin-top: 45px;
+}
+.Select_Button:hover{
+    cursor:pointer;
+    width: 230px;
+    margin-left: -30px;
+}
+.Select_Button>div{
+    line-height: 63px;
+    text-align: right;
+}
+/* 네비게이션 바 안에 선택 버튼 글자 정렬 */
+#Select_Logo>div{
+    margin-right: 52px;
+}
+#Select_Moto>div{
+    margin-right: 50px;
+}
+#Select_Expertise>div{
+    margin-right: 20px;
+}
+#Select_Location>div{
+    margin-right: 20px;
+}
+/* LOGO 스타일 지정 */
+#Logo{
+    margin-left: -20px;
+    background-color: white;
+    height: 100%;
+    justify-content: center;
+    transition: 0.5s;
+    width: 100%;
+}
+#Logo>div{
+    position: relative;
+    top:12%;
+    left: 200px;
+}
+#Logo_Head{
+    color: #0b1a2e;
+    font-family: default_Bold;
+    font-size: 45px;
+}   
+#Logo_Img{
+    margin-top: 70px;
+}
+#Logo_SecondLine{
+    margin-top: 45px;
+    font-size: 35px;
+}
+#Logo_SecondLine>div{
+    font-family: SansTTFLight;
+}
+#Logo_ThirdLine{
+    font-family: default_Light;
+    margin-top: 25px;
+    font-size: 25px;
+}
+#Logo_ThirdLine>div{
+    text-align: center;
+    margin-top: 5px;
+}
+/* Logo 안 텍스트들 중앙 정렬 */
+#Logo>div>div>div{
+    display: flex;
+    justify-content: center;
+}
+/* Moto 스타일 지정 */
+#Moto{
+    margin-left: -20px;
+    background-color: #0b1a2e;
+    height: 100%;
+    justify-content: center;
+    transition: 0.5s;
+}
+#Moto_Head{
+    font-family: default_Bold;
+    font-size: 45px;
+    color: white;
+}
+#Moto_SecondLine{
+    font-family: default_Bold;
+    font-size: 60px;
+    color: white;
+    margin-top: 100px;
+}
+#Moto_SecondLine>div>span{
+    color: #6dd2f7
+}
+#Moto_ThirdLine{
+    margin-top: 25px;
+    font-family: default_Light;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+#Moto_ThirdLine>div{
+    margin-top: 5px;
+}
+/* Moto 중앙 정렬 */
+#Moto>div{
+    position: relative;
+    top:12%;
+    left: 200px;
+}
+#Moto>div>div>div{
+    display: flex;
+    justify-content: center;
+}
+/* Expertise 스타일 지정 */
+#Expertise{
+    margin-left: -20px;
+    background-color:white;
+    height: 100%;
+    justify-content: center;
+    color: #0b1a2e;
+}
+
+#Expertise_Head{
+    font-family: default_Bold;
+    font-size: 45px;
+    text-align: center;
+}
+#Expertise_ContentsBox{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    transition: 0.5s;
+}
+#Web_Box{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#Android_Head,#Web_Head,#Design_Head{
+    text-align: center;
+    font-family: default_Bold;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.FirstLine{
+    text-align: center;
+    font-family: default_Medium;
+    margin-bottom: 7px;
+}
+.SecondLine{
+    text-align: center;
+    font-family: default_Light;
+    font-size: 17px;
+}
+/* 사진 크기 조절 */
+#Android_Img>img,#Web_Img>img,#Design_Img>img{
+    width: 95%;
+}
+/* Expertise 중앙 정렬*/
+#Expertise>div{
+    position: relative;
+    justify-content: center;
+    top:10%;
+    height: 100%;
+    left: 200px;
+    height: 100%;
+}
+#Android_Img,#Web_Img,#Design_Img{
+    height: 100%;
+    text-align: center;
+}
+/* Location 스타일 지정 */
+#Location{
+    background-color: #0b1a2e;
+    height: 100%;
+    color: white;
+    justify-content: center;
+}
+#Location>div{
+    font-size: 50px;
+    position: relative;
+    justify-content: center;
+    font-family: default_Bold;
+    top:35%;
+    height: 100%;
+    left: 200px;
+    height: 100%;
+}
+
+@media (max-width: 1400px){
+    #Select_Bar>div{
+        margin-left: 160px;
+    }
+    #Logo>div{
+        width:750px
+    }
+    #Moto>div{
+        width:750px
+    }
+    #Expertise_ContentsBox{
+        width: 750px;
+    }
+    .SecondLine{
+        font-size: 15px;
+    }
+}

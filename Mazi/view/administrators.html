@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/administrators.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/administrators.js"></script>
+        <link rel="icon" href="../image/mazi(smlogo_none).png"/> 
+        <title>administrators</title>
+    </head>
+    <body>
+        <div class="warp">
+            <div class="header">
+                <div>News</div>
+                <div>FAQ</div>
+                <div>Portfolio</div>
+                <div>제작 문의</div>
+            </div>
+            <div class="container">
+                <form class="form News" action="../php/administrators_News_Isert.php" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>제목</td>
+                                <td><input type="text" name="title"></td>
+                            </tr>
+                            <tr>
+                                <td>타이틀 이미지</td>
+                                <td><input type="file" name="image"></td>
+                            </tr>
+                            <tr>
+                                <td>본문 내용</td>
+                                <td><textarea name="message" id="" cols="30" rows="10"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Insert"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+                <form class="form FAQ display_none" action="../PHP/administrators_FAQ_Isert.php" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>질문</td>
+                                <td><input type="text" name="title"></td>
+                            </tr>
+                            <tr>
+                                <td>답변</td>
+                                <td><textarea name="message" id="" cols="30" rows="10"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Insert"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+                <form class="form Portfolio display_none" action="../PHP/administrators_Portfolio_Isert.php" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>카테고리</td>
+                                <td><input type="text" name="category"></td>
+                            </tr>
+                            <tr>
+                                <td>이름</td>
+                                <td><input type="text" name="projectname"></td>
+                            </tr>
+                            <tr>
+                                <td>이미지파일</td>
+                                <td><input type="file" name="images[]" multiple></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" value="Insert"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+            </div>
+            <!-- <form action="../PHP/administrators_News_Select.php" method="post">
+                <input type="submit" value="Select">
+            </form> -->
+        </div>
+    </body>
+</html>

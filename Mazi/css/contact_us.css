@@ -1,0 +1,219 @@
+html,
+#body {
+    margin: 0;
+}
+
+/* blank */
+
+.blank_Box {
+    height: 150px;
+}
+
+/* 메인 컨테이너 */
+.main_container {
+    display: flex;
+    width: 100%;
+}
+
+/* 이미지 및 글자 부분 컨테이너 */
+.img_container {
+    height: 600px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_container>img {
+    width: 1150px;
+}
+
+/* contact 컨테이너 부모. 중앙 정렬을 위한 부분 */
+.box {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 문의사항 컨테이너 그리드 배치 및 크기 설정. */
+.contact_container {
+    font-family: default_Medium;
+    display: grid;
+    border: 3px solid #0F2746;
+    border-radius: 0 8% 0 8%;
+    grid-template-columns: repeat(8, 70px);
+    height: 460px;
+    width: 560px;
+    row-gap: 10px;
+    color: #0F2746;
+}
+
+/* 그 아래 div영역들 포괄 */
+.contact_container>div {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 이름 */
+.contact_container>div:nth-child(1) {
+    margin-top: 20px;
+    grid-column: 1/5;
+}
+
+.contact_container>div:nth-child(1)>input {
+    width: 250px;
+}
+
+/* 연락처 */
+.contact_container>div:nth-child(2) {
+    margin-top: 20px;
+    grid-column: 5/9;
+}
+
+.contact_container>div:nth-child(2)>input {
+    width: 250px;
+}
+
+/* 이메일 */
+.contact_container>div:nth-child(3) {
+    grid-column: 1/9;
+}
+
+.contact_container>div:nth-child(3)>input {
+    width: 530px;
+}
+
+/* 분야 */
+.contact_container>div:nth-child(4) {
+    grid-column: 1/4;
+}
+
+.contact_container>div:nth-child(4)>select {
+    width: 180px;
+    height: 42px;
+}
+
+/* 구축 예산 */
+.contact_container>div:nth-child(5) {
+    margin-left: -30px;
+    grid-column: 4/7;
+}
+/* 증가 감소 버튼 없애기 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contact_container>div:nth-child(5)>input {
+    width: 150px;
+    height: 42px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.contact_container>div:nth-child(5)>span {
+    margin-left: 5px;
+}
+
+/* 디자인 시안 여부 */
+.contact_container>div:nth-child(6) {
+    margin-left: -30px;
+    grid-column: 7/9;
+}
+
+.contact_container>div:nth-child(6)>span {
+    margin-right: 10px;
+}
+
+/* 문의내용 */
+.contact_container>div:nth-child(7) {
+    grid-column: 1/9
+}
+
+.contact_container>div:nth-child(7)>textarea {
+    width: 530px;
+}
+
+/* 개인정보이용동의 */
+.contact_container>div:nth-child(8) {
+    grid-column: 1/9;
+    margin-bottom: -20px;
+}
+
+.contact_container>div:nth-child(8)>label {
+    margin-right: 10px;
+}
+
+/* Warring(예외처리 문구) */
+#warring {
+    visibility: hidden;
+    color: red;
+    grid-column: 1/9;
+}
+
+/* submit(문의하기 버튼) */
+.contact_container>div:nth-child(10) {
+    margin-top: -15px;
+    grid-column: 4/6;
+    margin-bottom: 10px;
+}
+
+.send {
+    background-color: white;
+    color: #0F2746;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    transition: background-color 0.5s;
+}
+
+.send:hover {
+    background-color: gray;
+}
+
+/* 모달창 */
+#modal_Container {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+#modal_Content {
+    display: flex;
+    position: absolute;
+    background-color: #ffffff;
+    width: 300px;
+    height: 70px;
+    padding: 15px;
+    border-radius: 12px;
+    justify-content: center;
+}
+
+#modal_Container.hidden {
+    display: none;
+}
+
+/* 모달창 버튼 */
+#modalButton {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: 0px;
+    font-family: default_Medium;
+}
+
+#modalButton:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+    
+    <script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="../css/contact_us.css">
+    <script type="text/javascript" src="../js/contact_us.js"></script>
+    <link rel="icon" href="../image/mazi(smlogo_none).png"/> 
+    <title>MAZI - 문의하기</title>
+</head>
+
+<body>
+    <div class="floating">
+        <a href="../../index.html"><div class="Logo color"></div></a>
+        <div class="nav_bar">
+            <a class="nav_btn color" href="../../index.html">Home</a>
+            <a class="nav_btn color" href="../view/about_us.html">About Us</a>
+            <a class="nav_btn color" href="../view/news.html">News</a>
+            <a class="nav_btn color" href="../view/portfolio.html">Portfolio</a>
+            <a class="nav_btn color" href="../view/faq.html">FAQ</a>
+        </div>
+    </div>
+    <div class="blank_Box">
+    </div>
+    <div class="main_container">
+
+        <div class="img_container">
+            <img src="../image/contact_us/contact_us.png" alt="img">
+        </div>
+        <div id="modal_Container" class="hidden">
+            <div id="modal_Content">
+                <h2>발송되었습니다 !</h2>
+                <button id="modalButton">X</button>
+            </div>
+        </div>
+        <div class="box">
+            <form id="email_form" class="gform pure-form pure-form-stacked" method="POST"
+                data-email="mazi0226com@gmail.com">
+
+                <div class="contact_container">
+                    <div>
+                        <input id="name" name="name" placeholder="*이름">
+                    </div>
+                    <div>
+                        <input id="number" name="number" placeholder="*연락처 숫자만 입력해주세요.">
+                    </div>
+                    <div>
+                        <input id="email" name="email" type="email" value="" placeholder="이메일">
+                    </div>
+                    <div>
+                        <select name="field" id="field">
+                            <option value="none">*분야</option>
+                            <option value="안드로이드">안드로이드</option>
+                            <option value="웹디자인">웹디자인</option>
+                            <option value="프로젝트 프로모션">프로젝트 프로모션</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="number"  name="budget" id="budget" placeholder="*구축 예산" min="0"> <span>만원</span>
+                    </div>
+                    <div>
+                        <span>
+                            *디자인 시안
+                        </span>
+                        <div>
+                            <label for="DesignCheckYes"><input type="radio" name="DesignCheck" id="DesignCheckYes"
+                                    value="디자인 시안 있음">있음</label>
+                            <label for="DesignCheckNo"><input type="radio" name="DesignCheck" id="DesignCheckNo"
+                                    value="디자인 시안 없음">없음</label>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea id="inquiry" name="inquiry" placeholder="문의내용" rows="2"></textarea>
+                    </div>
+
+                    <div id="privacy_check">
+                        <label for="privacy">
+                            <span>개인정보 이용에 동의합니다.</span> <input type="checkbox" name="privacy_check" id="privacy" value="동의">
+                        </label>
+                        <button type="button" id="privacy_click">자세히 보기</button>
+                    </div>
+                    <div id="warring">
+                        임시테스트용
+                    </div>
+                    <div>
+                        <button class="send" id="send">문의하기</button>
+                    </div>
+                </div>
+
+            </form>
+            <script data-cfasync="false" src="../js/form-submission-handler.js"></script>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
